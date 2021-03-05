@@ -93,11 +93,18 @@ kubectl create -f examples/staging/selenium/selenium-node-chrome-deployment.yaml
 kubectl scale deployment selenium-node-chrome --replicas=5
 ```
 
-## STEP 3 - execute a test (see `Dockerfile` in this repo) via the hub:
+## STEP 3 - execute a test (see `Dockerfile` in this repo) via the selenium-hub:
+
+This pulls the latest image from tzom/webapp_testing (Dockerfile in this repo) and executes the test on the selenium-hub.
+
+```sh
+kubectl create -f selenium-test-job.yaml
+```
+
+Optionally, build the required image (from the Dockerfile in this repo):
 
 ```sh
 docker build -t selenium-test .
-kubectl create -f selenium-test-job.yaml
 ```
 
 ## STEP 4 - check results
