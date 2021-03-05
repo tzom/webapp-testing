@@ -53,7 +53,7 @@ docker run -it -v $(pwd)/test_basic.py:/_.py joyzoursky/python-chromedriver:3.8-
 >
 >OK
 
-### Run a test triggering a sql query (`test_plot_.py` in this repo):
+### Run a test that does some plotting (`test_plot_.py` in this repo):
 ```sh
 docker run -it -v $(pwd)/test_plot_.py:/_.py joyzoursky/python-chromedriver:3.8-selenium python _.py
 ```
