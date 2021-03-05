@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: selenium-test
+spec:
+  template:
+    spec:
+      containers:
+      - name: selenium-test
+        image: selenium-test
+        imagePullPolicy: Never
+      restartPolicy: Never
